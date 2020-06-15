@@ -1,4 +1,4 @@
 # geoloc
 Test de géolocalisation
 
-[Rejoindre le GPS](./gps.html)
+[Rejoindre le GPS](https://bigaston.github.io/geoloc/gps.html)
