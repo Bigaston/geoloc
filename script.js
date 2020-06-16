@@ -3,7 +3,8 @@ let tab_waypoint = [];
 
 var watchID;
 function startGeoloc() {
-    watchID = navigator.geolocation.watchPosition(traiteChangement, traiteError);
+	watchID = navigator.geolocation.watchPosition(traiteChangement, traiteError,
+		{enableHighAccuracy: true});
 }
 
 function stopGeoloc() {
@@ -44,7 +45,7 @@ function addWaypoint() {
     navigator.geolocation.getCurrentPosition((pos) => {
 		tab_waypoint.push({lat: pos.coords.latitude, lon: pos.coords.longitude, acc: pos.coords.accuracy});
 		document.getElementById("waypoint").innerHTML += `\n{lat: ${pos.coords.latitude}, lon: ${pos.coords.longitude}}`
-    }, traiteError)
+    }, traiteError, {enableHighAccuracy: true})
 }
 
 function traiteChangement(pos) {
