@@ -9,8 +9,14 @@ Activez la géolocalisation et rendez vous sur la page du GPS. Vous pouvez déma
 Quand vous arrêterez le tracé, un fichier GPX de votre trace sera automatiquement téléchargé, et il sera affiché sur une carte juste en dessous.
 
 ## Fichiers
+- `gps.html` : La page HTML principale de ce projet.
+- `script.js` : Tous le code de gestion du projet et de la géolocalisation
+- `img/` : Les images du projets (pour afficher le début, la fin, et les points)
 
 ## Libs
 - OpenStreetMap
 - Leaflet
 - [Leaflet GPX](https://github.com/mpetazzoni/leaflet-gpx)
+
+## Crédit
+Outil développé par Bigaston : [🐦 Twitter](https://twitter.com/Bigaston) | [💸 uTip](https://utip.io/Bigaston)

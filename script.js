@@ -63,8 +63,16 @@ function afficherCarte(gpx) {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
-	var gpx = gpx; // URL to your GPX file or the GPX itself
-	new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+	var gpx = gpx;
+	new L.GPX(gpx, {
+		async: true,
+		marker_options: {
+			startIconUrl: 'img/pin-icon-start.png',
+			endIconUrl: 'img/pin-icon-end.png',
+			shadowUrl: 'img/pin-shadow.png',
+			iconUrl: "img/pin-icon-wpt.png"
+		}
+	}).on('loaded', function(e) {
 		map.fitBounds(e.target.getBounds());
 	}).addTo(map);
 }
