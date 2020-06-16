@@ -59,7 +59,7 @@ function stopGeoloc() {
 	console.log(gpx)
 
 	// Téléchargement du fichier GPX
-	download(`trace_${Date.now}.gpx`, gpx)
+	download(`trace_${Date.now()}.gpx`, gpx)
 
 	// Lancement de l'affichage de la carte
 	afficherCarte(gpx)
