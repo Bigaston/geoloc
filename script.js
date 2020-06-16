@@ -42,13 +42,13 @@ function stopGeoloc() {
 
 function addWaypoint() {
     navigator.geolocation.getCurrentPosition((pos) => {
-		tab_waypoint.push({lat: pos.coords.latitude, lon: pos.coords.longitude});
+		tab_waypoint.push({lat: pos.coords.latitude, lon: pos.coords.longitude, acc: pos.coords.accuracy});
 		document.getElementById("waypoint").innerHTML += `\n{lat: ${pos.coords.latitude}, lon: ${pos.coords.longitude}}`
     }, traiteError)
 }
 
 function traiteChangement(pos) {
-	tab_trace.push({lat: pos.coords.latitude, lon: pos.coords.longitude})
+	tab_trace.push({lat: pos.coords.latitude, lon: pos.coords.longitude, acc: pos.coords.accuracy})
 	document.getElementById("trace").innerHTML += `\n{lat: ${pos.coords.latitude}, lon: ${pos.coords.longitude}}`
 }
 
