@@ -12,9 +12,9 @@
         </style>
     </head>
     <body>
-        <button onclick="startGeoloc()">Démarer</button>
-        <button onclick="stopGeoloc()">Arrêter</button>
-        <button onclick="addWaypoint()">Ajouter un point</button>
+        <button id="btnstart" onclick="startGeoloc()">Démarer</button>
+        <button id="btnstop" onclick="stopGeoloc()" disabled>Arrêter</button>
+        <button id="btnwaypoint" onclick="addWaypoint()" disabled>Ajouter un point</button>
 		
 		<p>Trace</p>
 		<pre id="trace"></pre>
